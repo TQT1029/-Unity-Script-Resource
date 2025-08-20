@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class CreateObjects : MonoBehaviour
 {
@@ -17,8 +17,10 @@ public class CreateObjects : MonoBehaviour
         if (originalObject == null)
             originalObject = transform.parent.Find("Original Coin").gameObject;
         // Tìm nơi chứa object spawn ra
-        if (originalObject == null)
+        if (objectStorage == null)
             objectStorage = transform.Find("Object Storage");
+
+        if (originalObject == null || objectStorage == null) return;
 
         // Lấy mốc start và end để spawn object
         startPos = transform.Find("Start Point");
