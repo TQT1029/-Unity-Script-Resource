@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CreateObjects : MonoBehaviour
+public class CreateObjectsLine : MonoBehaviour
 {
     [Header("Config")]
     [SerializeField, Min(1)] private int spawnCount = 5;// Số lượng object muốn sinh ra, tối thiểu 1
@@ -48,4 +48,5 @@ public class CreateObjects : MonoBehaviour
         }
     }
 }
+
 
